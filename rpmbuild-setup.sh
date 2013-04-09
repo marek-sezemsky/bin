@@ -8,7 +8,7 @@ set -e
 set -u
 set -x
 
-rpms="rpm rpm-build redhat-rpm-config fedora-packager rpmdevtools"
+rpms="rpm-build redhat-rpm-config fedora-packager rpmdevtools buildsys-macros"
 rpm -q $rpms || yum install $rpms
 
 if [ $EUID -eq 0 ]; then
