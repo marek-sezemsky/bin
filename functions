@@ -1,0 +1,22 @@
+# Generic shell functions.
+
+# Abort the script with error message.
+exit_error() # {{{
+{
+    echo "$(basename $0): Error: $*" >&2
+    exit 1
+} # }}}
+
+# Show warning.
+msg_warning() # {{{
+{
+    echo "$(basename $0): Warning: $*" >&2
+} # }}}
+
+# Return timestamp
+get_timestamp() # {{{
+{
+    /bin/date '+%Y%m%dT%H%M%S'
+} # }}}
+
+# vim:ft=sh

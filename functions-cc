@@ -1,0 +1,19 @@
+# Generic shell ClearCase functions.
+
+source $(dirname $0)/functions
+
+cleartool="/opt/rational/clearcase/bin/cleartool"
+[ -x "$cleartool" ] || exit_error "ClearCase not installed on this machine"
+
+view_present() # {{{
+{
+    local tag=$1
+
+    if $cleartool lsview -short $tag >/dev/null 2>&1; then
+        return 0
+    else
+        return 1
+    fi
+} # }}}
+
+# vim:ft=sh
