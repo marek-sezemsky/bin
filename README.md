@@ -15,3 +15,5 @@ Content
 * `functions*` - various shell functions.
 * `cc-view-*.sh` - scripts for my ClearCase view workflow.
 * `rpmbuild-setup.sh` - setup this machine as RPM builder.
+* `apt-cyg` - Cygwin package installer.
+* `mkrpm` - create RPM from spec
